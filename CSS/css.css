@@ -207,3 +207,10 @@ footer{
 .footer_info >p {
     height: 0px;
 }
+
+.work_in_progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
