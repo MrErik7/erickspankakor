@@ -1,0 +1,209 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding:0px;
+    margin: 0px;
+    font-family: Rufin;
+    gap:0px;
+    overflow-x:hidden;
+    --maincolour: rgb(159, 68, 65);
+}
+
+header{
+    background-color:rgb(159, 68, 65);
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* Header på index sidan */
+.title{
+    font-size: 32px;
+    color: white;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+
+.contact{
+    display:flex;
+    align-content: center;
+    column-gap: 1.5rem;
+    color:white;
+    font-size: 12px;
+}
+
+.contact_option{
+    display:flex;
+    align-items: center;
+    width:2.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.media_icon{
+    filter:invert();
+    width:1.5rem;
+}
+
+h2{
+    margin: 0px;
+    font-size: 48px;
+}
+
+/* Main på indesx */
+
+main{
+    width: 100vw;
+    height: fit-content;
+    display:flex;
+    flex-direction: column;
+}
+
+
+.article1{
+    height:100vh;
+    color:white;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1.75rem;
+}
+
+.pancakebackground{
+    position:absolute;
+    height:100%;
+    width:110%;
+    z-index: -1;
+    background-image: url("/img/pancake_bg.jpg");
+    background-repeat: no-repeat;
+    background-position-y: -70vh; 
+    background-size: cover;
+    align-items: center;
+    /* filter:sepia(60%); */
+    filter:brightness(60%);
+}
+
+.article1text{
+    padding-top: 30vh;
+    text-align: center;
+    justify-content: center;
+}
+
+.view_locations{
+    width:fit-content;
+    border: solid white 2px;
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+
+.about{
+    background-color: rgb(200,218,217);
+    padding: 3rem 1.5rem 5rem 1.5rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:100vw;
+}
+
+.about_text_restaurant{
+    width: 35vw;
+}
+
+
+.about_text > p {
+    font-size: 20px;
+
+}
+
+
+.about_text h3 {
+    font-size: 30px;
+}
+
+
+.quote{
+    background-color: rgb(200,218,217);
+    display:flex;
+    flex-direction:row-reverse;
+    padding: 3rem;
+    font-size: 18px;
+    font-weight: 100;
+    text-decoration:underline;
+}
+
+.message_article{
+    background-color: rgb(200,218,217);
+    padding: 3rem 1.5rem 5rem 1.5rem;
+    display:flex;
+}
+
+.message_info{
+    width: 60%;
+}
+
+.message_info > h4 {
+    font-size: 18px;
+}
+
+.message_info > p {
+    font-size: 12px;
+}
+
+
+
+footer{
+    background-color:var(--maincolour);
+    font-size: 75%;
+    color: white;
+    width:100%;
+     height: fit-content;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows:1fr 1fr;
+    grid-template-areas:
+    'lable info'
+    'lable info'
+}
+
+.footer_lable{
+    grid-area: lable;
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    padding:2rem;
+    border-right:black dotted 2px;
+}
+
+.media_links{
+    display:flex;
+}
+
+.footer_title{
+    font-size:150%;
+}
+
+.footer_info{
+    display:flex;
+    flex-direction: column;
+    align-items:end;
+    grid-area: info;
+    padding-right: 1rem;
+}
+
+.footer_info >p {
+    height: 0px;
+}

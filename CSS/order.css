@@ -1,0 +1,93 @@
+
+  
+  body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+  
+  header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+  }
+  
+  header h1 {
+      font-size: 36px;
+  }
+  
+  nav ul {
+      list-style: none;
+  }
+  
+  nav ul li {
+      display: inline;
+      margin-right: 20px;
+  }
+  
+  nav a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+  }
+  
+  .hero {
+      background-image: url('pancake-hero.jpg'); /* Replace with your own image */
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 200px 0;
+  }
+  
+  .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+  }
+  
+  .hero p {
+      font-size: 24px;
+      margin-bottom: 40px;
+  }
+  
+  .btn {
+      background-color: #ff9900;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+  }
+  
+  .menu {
+      background-color: #fff;
+      padding: 60px 0;
+  }
+  
+  .about {
+      background-color: #f9f9f9;
+      padding: 60px 0;
+  }
+  
+  .contact {
+      background-color: #333;
+      color: #fff;
+      padding: 60px 0;
+  }
+  
+  footer {
+      background-color: #444;
+      color: #fff;
+      padding: 20px 0;
+  }
+  
+  footer p {
+      font-si
