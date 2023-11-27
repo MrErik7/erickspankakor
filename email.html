@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter Signup</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="newsletter-form">
+      <h2>Bli påmind</h2>
+      <form
+        id="myForm"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSdV3JvlCBLZDZIoR3FvulFieD_oMTd_3W0ZwsvWOseF9RSVHg/formResponse"
+        method="POST"
+      >
+        <div class="input-group">
+          <input
+            name="entry.2089670584"
+            type="email"
+            id="email"
+            placeholder="exempel@email.com"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <button type="submit">Skicka</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script>
+    $("#myForm").on("submit", function (e) {
+      e.preventDefault(); // Prevent the default form submission
+
+      $.ajax({
+        url: $(this).attr("action"),
+        type: "POST",
+        data: $(this).serialize(), // Get form data
+        success: function (data) {
+          // Handle success here (e.g., display a success message)
+        },
+        error: function (data) {
+          // Handle error here (e.g., display an error message)
+        },
+      });
+    });
+    const form = document.getElementById("myForm");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent the default form submission
+      form.reset(); // Reset the form to clear the input field
+    });
+  </script>
+</html>
