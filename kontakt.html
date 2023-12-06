@@ -47,54 +47,35 @@
         </div>
     </header>
     <main>
-        <article class="article1">
-            <div class="pancakebackground"></div>
-            <div class="article1text">
-                <div id="clock">
-                    <div id="days">
-                        <p class="time"></p>
-                        <p>Days</p>
-                    </div>
-                    <p>:</p>
-                    <div id="hours">
-                        <p class="time"></p>
-                        <p>Hours</p>
-                    </div>
-                    <p>:</p>
-                    <div id="minutes">
-                        <p class="time"></p>
-                        <p>Minutes</p>
-                    </div>
-                    <p>:</p>
-                    <div id="seconds">
-                        <p class="time"></p>
-                        <p>Seconds</p>
-                    </div>
+        <div class="contact-container">
+            <div class="info-section">
+                <div>
+                    <label>Email:</label>
+                    <p>info@erickspankakor.net</p>
                 </div>
-                <p> Indulge in mouthwatering Swedish pancakes at Ericks Pankakor.
-                    <br> Experience a taste of Sweden like never before.
-                </p>
             </div>
-            <a class="button_white" href="platser.html"> Besök nu </a>
-        </article>
-        <article class="article_info">
-            <section class="section_info">
-                <img src="" alt="" class="info_img">
-                <div class="text_info">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium numquam, suscipit ullam perspiciatis, quis aliquam dolorum ducimus ea quibusdam officiis nisi voluptates officia aperiam quae quas ab voluptatum voluptatem eveniet!</p>
-                    <a href="om_oss.html" class="button_black">Mer om oss</a>
+    
+            <div class="info-section">
+                <div>
+                    <label>Address:</label>
+                    <p>Origovägen 4, Göteborg</p>
                 </div>
-            </section>
-            <section class="section_info">
-                <!--Ingen aning om vilken information vi vill ha här-->
-                <!--priser, säljtillfällen?-->
-                <div class="text_info">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum officia quis est nobis, reiciendis sequi aut esse adipisci. Ex ipsa nam dolorem veniam necessitatibus sapiente, maxime neque eum aliquid dicta.</p>
-                    <a href="[Hippity]" class="button_black">Hoppity?</a>
-                </div>
-                <img src="" alt="" class="info_img">
-            </section>
-        </article>
+            </div>
+    
+            <form id="myform" class="contact-form" method="post">
+                <label for="name">Namn:</label>
+                <input type="text" id="name" name="entry.863913335" required>
+    
+                <label for="email">Din Email:</label>
+                <input type="email" id="email" name="entry.1336722976" required>
+    
+                <label for="message">Ditt meddelande:</label>
+                <textarea id="message" name="entry.21768844" rows="4" required></textarea>
+    
+                <button type="submit">Skicka</button>
+            </form>
+        </div>
+    
     </main>
     <footer>
         <div class="footer_lable">
@@ -118,5 +99,28 @@
         </div>
     </footer>
 </body>
+<script>document.getElementById('myform').addEventListener('submit', function(e) {
+    e.preventDefault();  // Prevent the default form submission
 
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    var formData = new FormData();
+    formData.append('entry.863913335', name);
+    formData.append('entry.1336722976', email);
+    formData.append('entry.21768844', message);
+
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLSdlOpUu1KYuYSarzU-X_5chtSkMOyKkOQUDW-yTOOh_pXsbJQ/formResponse', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message));
+
+    // Clear the form fields
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+});</script>
 </html>
